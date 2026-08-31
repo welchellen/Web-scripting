@@ -35,3 +35,13 @@ powerLevel = (currentHealth * 0.5) + (experiencePoints * 10);
 console.log("Health after potion: " + currentHealth);
 console.log("XP after potion: " + experiencePoints);
 console.log("Updated Power Level: " + powerLevel);
+
+for (let day = 1; day <= 5; day++) {
+    experiencePoints += 20;
+
+    console.log(
+        "Day " + day + ": Training hard... XP is now " + experiencePoints
+    );
+}
+
+console.log("Final XP after training: " + experiencePoints);
