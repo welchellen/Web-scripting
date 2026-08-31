@@ -10,6 +10,9 @@ The compound assignment operator made my code shorter and easier to read. Instea
 
 The loop allows the program to repeat the same action without me having to write the same code several times. In this case, the loop represents five days of training and adds experience points each day. If I needed to simulate 100 days instead, I could change the loop condition from 5 to 100 instead of writing the training code 100 separate times.
 
+## Phase 4
+
+I used a `while` loop for the boss battle. The loop continues running while both the hero and the boss still have health remaining. Unlike the `for` loop from Phase 3, I did not know exactly how many times the battle needed to repeat. The `while` loop keeps running until its condition becomes false, which happens when either the hero or the boss is defeated.
 
 
 
