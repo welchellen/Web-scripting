@@ -24,5 +24,16 @@ let seniorprice= applydiscount( 100, seniorDiscount);
 console.log ("Studentprice" , studentprice );
 console.log ("Seniorprice", seniorprice);
 
+function calculateFinalbill (price, quantity, discountcallback) {;
+let subtotal= calculatePrice(price, quantity);
+let discountedPrice = applydiscount(subtotal, discountcallback);
+let taxamount= getTax(discountedPrice, 0.07);
+
+
+return discountedPrice + taxamount;
+}
+let finalBill = calculateFinalbill(20, 3, studentDiscount);
+console.log("Final Bill:", finalBill);
+
 
 

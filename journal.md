@@ -14,8 +14,7 @@ Why is applyDiscount considered a “Higher-Order Function”? What role did stu
 
 It is considered a high order function because it takes on another argument. Student discount and senior discount played the role of the argument. I don't know quite yet what to write to apply no discount. Unless you just didn't use the functions senior discount and student discount. 
 
-
-
 Phase 5:
+In this phase I created a function and broke down the steps to the code inside which made it a lot easier to comprehend and understand what I was doing. 
 
 
