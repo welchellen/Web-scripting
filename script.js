@@ -1,10 +1,6 @@
-function calculatePrice (price, quantity) { 
-    return price * quantity;
-}
+const calculatePrice = (price, quantity) => price * quantity;
 
-const getTax= function (amount, Taxrate) {
-    return amount * Taxrate;
-};
+const getTax= (amount, Taxrate) => amount * Taxrate;
 
 let subtotal = calculatePrice (15,4);
 let tax = getTax (subtotal,0.07);
@@ -18,4 +14,15 @@ return getTax(amount * defaultTaxRate)
 let defaultTaxRate= (calculatestoreprice (100));
 console.log (calculatestoreprice)
 //console.log (defaultTaxRate);
+function applydiscount (total, discountcallback){ ;
+    return (discountcallback)(total);
+};
+const studentDiscount = (total) => (total * 0.90); 
+const seniorDiscount = (total) => (total * 0.80);
+let studentprice= applydiscount(100, studentDiscount);
+let seniorprice= applydiscount( 100, seniorDiscount);
+console.log ("Studentprice" , studentprice );
+console.log ("Seniorprice", seniorprice);
+
+
 

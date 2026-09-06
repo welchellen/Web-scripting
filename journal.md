@@ -6,9 +6,14 @@ In this phase I had to research just exactly how to use the get tax variable in 
 
 
 Phase 3:
-
+In this phase I used the consise arrow syntax which made the code a lot easier to understand by simplifying the syntax. 
+Do I have to call the phase 1 console.log everytime or does it just stay in the code to appear on the console? So that when I refresh it it has the same results everytime. 
 
 Phase 4:
+Why is applyDiscount considered a “Higher-Order Function”? What role did studentDiscount and seniorDiscount play? What function would you have to write if you wanted to apply no discount?
+
+It is considered a high order function because it takes on another argument. Student discount and senior discount played the role of the argument. I don't know quite yet what to write to apply no discount. Unless you just didn't use the functions senior discount and student discount. 
+
 
 
 Phase 5:
