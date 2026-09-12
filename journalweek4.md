@@ -1,0 +1,10 @@
+Week 4 Interactive receipt and Bill calculator:
+Phase 1:
+Instead of putting all the store details into a single storeInfo object, you could have saved each detail in its own standalone global variable. What are the advantages of grouping related data into an object versus managing separate variables?
+
+The advantages of grouping related data into an object versus managing separate variables include it helping to keep things organized and a lot less code. If I had saved each detail in it's own standalone global variable it would have created confusion in the longevity of my code. 
+Phase 2:
+
+Phase 3:
+
+Phase 4:
