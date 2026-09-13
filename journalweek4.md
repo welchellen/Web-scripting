@@ -9,7 +9,12 @@ I tried this and It said it couldn't find the variable. It effects the ways beca
 
 
 Phase 3:
-
+Reflect on using the for...of loop to move through your list. How did you target and pull out just the price property from each item object inside the loop?
+Using the for..of loop to move through the list was very helpful but also very tedious. I had my console.log in the wrong place and it was printing to the console before it had any answers. But using the loop I used subtotal= subtotal+ item price to pull out the item price property with each user imput.
 
 
 Phase 4:
+Reflect on how using .pop() affected your data. How did removing an item from the array automatically change your final calculations when you ran the total logic?
+
+Using .pop() removed the item and removing the item automatically changed the final calculations to $0 if i only bought one item. It changed the total logic but kept the tax and table rate the same. 
+
