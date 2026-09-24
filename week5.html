@@ -1,7 +1,94 @@
 <!DOCTYPE html>
-<head> 
- Virtual Poem Gallery   
+<html>
+
+<head>
+    <title>Virtual Poem Gallery</title>
 </head>
+
+<body>
+
+    <h1>Virtual Poem Gallery</h1>
+
+    <!-- East Wall -->
+    <div id="wall-east">
+
+        <article id="poem-sunrise">
+            <h3>Sunrise</h3>
+            <p>
+                The sun comes up,<br>
+                The night goes away,<br>
+                And I begin another day.
+            </p>
+        </article>
+
+        <article id="poem-rain">
+            <h3>Rain</h3>
+            <p>
+                Rain on my window,<br>
+                Clouds in the sky,<br>
+                I watch the storm go by.
+            </p>
+        </article>
+
+    </div>
+
+
+    <!-- West Wall -->
+    <div id="wall-west">
+
+        <article id="poem-stars">
+            <h3>Stars</h3>
+            <p>
+                Stars shine bright,<br>
+                High in the night,<br>
+                Filling the darkness with light.
+            </p>
+        </article>
+
+        <article id="poem-coffee">
+            <h3>Coffee</h3>
+            <p>
+                Coffee in my cup,<br>
+                Please wake me up,<br>
+                I have class at eight.
+            </p>
+        </article>
+
+    </div>
+
+
+    <!-- Submission Station -->
+    <h2>Submission Station</h2>
+
+    <label for="poem-title">Poem Title:</label>
+    <input type="text" id="poem-title">
+
+    <br><br>
+
+    <label for="poem-lines">Poem:</label>
+    <textarea id="poem-lines"></textarea>
+
+    <br><br>
+
+    <label for="poem-color">Background Color:</label>
+    <input type="color" id="poem-color">
+
+    <br><br>
+
+    <label for="wall-choice">Choose a Wall:</label>
+
+    <select id="wall-choice">
+        <option value="wall-west">West Wall</option>
+        <option value="wall-east">East Wall</option>
+    </select>
+
+    <br><br>
+
+    <button id="add-poem">Add Poem</button>
+
+</body>
+
+</html>
 
 
 
