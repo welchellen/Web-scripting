@@ -6,3 +6,7 @@ The difference between what getElementById returned and the group selection is t
 Phase 3: When you moved the item, did you have to manually “delete” it from the first wall? Explain what happened to the node in the DOM tree when you called the movement method. 
 
 When I moved the item I didn't have to delete it I just used the ammendchild method and it moved it for me. I had to create variable for the child and parent function in order to define them. When I called the movement method it moved the poem to the east wall in the DOM tree.
+
+Phase 4: Describe the lifecycle of an element created with document.createElement(). Where does that element exist in memory before you call appendChild(), and at what point does it become visible on the page?
+
+The lifecyle of the element created with document.createElement() creates the element but it is only in the document you created it in. It exists in whatever document you created it in untill you call append child and move it somewhere else. It becomes visible when you call console.log. 
