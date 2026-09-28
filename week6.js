@@ -22,24 +22,24 @@ console.log("ERROR could not connect to the dictionary service.")
 })
 
 }}))
-function searchWord(word) {
+async function searchWord(word) {
 
     resultContainer.innerHTML = "";
 
     word = word.toLowerCase();
 
-    fetch("YOUR API URL HERE" + word)
+   const response = await fetch ("api-1.json".word)
 
-        .then(function(response) {
+        async(function(response) {
 
             if (!response.ok) {
                 throw new error("Word not found");
             }
 
-            return response.json();
+            const data =  response.json();
         })
 
-        .then(function(data) {
+        async(function(data) {
 
             if (data.entries.length === 0) {
                 throw new Error("Word not found");

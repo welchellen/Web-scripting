@@ -10,5 +10,5 @@ In this code a promise represents getting something from json. If the api is dow
 Phase 3:
 Using the Fetch API improves the user experience because the page does not have to completely reload every time the user searches for a word. Instead, only the part of the page displaying the results is updated. This makes the website feel faster and smoother because the user can stay on the same page and quickly search for another word.
 
-Phase 4:
+Phase 4:I prefer using async/await because it is easier for me to read and follow. With the `.then()` calls, I sometimes get confused about what data is being passed to the next part. Async/await feels more like normal JavaScript because the code goes from top to bottom in order. I think it makes it easier to understand what is happening with the fetch request.
 
