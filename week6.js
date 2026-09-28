@@ -5,8 +5,8 @@ fetch("api-1.json")
 return response.json(); })
 .then (function (data){
     console.log (data)
-}); 
-.then(function(data){
+}
+    .then(function(data){
     if (data.length ===0 ) {
     console.log("Word not found!")
     } else {
@@ -16,11 +16,10 @@ return response.json(); })
         data[0].meanings[0].definitions[0].defintions
 
     )
-.catch(function(Error
+.catch(function(error) {
+console.log("ERROR could not connect to the dictionary service.")
+})
 
-
-
-
- })
+}}))
 
 
