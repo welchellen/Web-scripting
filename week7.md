@@ -5,3 +5,8 @@ I implemented the setInterval function and put the colors as the argument and th
 Phase 2:
 Explain the concept of “event bubbling.” How did stopPropagation() allow you to separate the Dancer’s interaction from the Floor’s interaction?
 The concept of event bubbling is when events in js are called when one element is nested in another element. While they all have seperate listeners. stopPropagation() seperated the call from the dance floor and the call from the dancer. This allowed me to be able to click them seperatly. 
+
+Phase 3:
+Why is it more effective to use a global window listener for keyboard shortcuts rather than attaching the listener to a specific HTML element? What are some challenges when handling “held down” keys?
+
+It is more effective because you can use a global window listener anywhere which is expecially important for the keyboard shortcuts because it captures the key presses anywhere on the page. Which can prevent missed inputs.
