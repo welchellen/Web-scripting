@@ -1,93 +1,68 @@
-fetch("api-1.json")
-    .then(function(response){
-    if (!response.ok){ throw new error("Something went wrong!")
-    };
-return response.json(); })
-.then (function (data){
-    console.log (data)
-}
-    
-.then(function(data){
-    if (data.length ===0 ) {
-    console.log("Word not found!")
-    } else {
-    console.log ("Word:",data[0].word )
-    console.log (
-        "Definition:",
-        data[0].meanings[0].definitions[0].defintions
+const resultContainer = document.getElementById("result-container");
+const searchBtn = document.getElementById("search-btn");
 
-    )
-.catch(function(error) {
-console.log("ERROR could not connect to the dictionary service.")
-})
-
-}}))
 async function searchWord(word) {
 
     resultContainer.innerHTML = "";
 
     word = word.toLowerCase();
 
-   const response = await fetch ("api-1.json".word)
+    fetch("https://freedictionaryapi.com/api/v1/entries/en/" + word)
 
-        async(function(response) {
+        const function(response) {
 
             if (!response.ok) {
-                throw new error("Word not found");
+                resultContainer.textContent = "Service Down";
+                return;
             }
 
-            const data =  response.json();
-        })
+            return response.json();
+        }
 
-        async(function(data) {
+        const (data) {
 
-            if (data.entries.length === 0) {
-                throw new Error("Word not found");
+        
+            if (!data) {
+                return;
             }
+
+            console.log(data);
 
             const wordHeading = document.createElement("h2");
-
-            wordHeading.textContent = word;
-
+            wordHeading.textContent = data.word;
             resultContainer.appendChild(wordHeading);
-
 
             const definitionList = document.createElement("ul");
 
-            for (const sense of data.entries[0].senses) {
+            for (const entry of data.entries) {
 
-                const listItem = document.createElement("li");
+                for (const sense of entry.senses) {
 
-                listItem.textContent = sense.definition;
+                    const listItem = document.createElement("li");
+                    listItem.textContent = sense.definition;
 
-                definitionList.appendChild(listItem);
+                    definitionList.appendChild(listItem);
+                }
             }
 
             resultContainer.appendChild(definitionList);
-
         })
 
-        .catch(function(error) {
+        .try(function(Error))
 
-            const errorMessage = document.createElement("p");
+            console.log("ERROR:", error);
 
-            errorMessage.textContent =
+            resultContainer.textContent =
                 "Sorry, that word could not be found.";
 
-            resultContainer.appendChild(errorMessage);
+}
 
-        });
-}const searchBtn = document.getElementById("search-btn");
 
-searchBtn.addEventListener("click", () => {
-
+searchBtn.addEventListener("click", function() {
 
     const wordInput = document.getElementById("word-input");
     const word = wordInput.value;
 
-
     searchWord(word);
 
 });
-
-
