@@ -15,35 +15,45 @@ panel2.style.backgroundColor="RGB("+red+", "+blue+","+green+")"
 },2000);
 
 let dancefloor=document.getElementById("Dance-Floor");
-let emoji=document.getElementById("dancer")
+let emoji=document.getElementById("dancer");
+
 dancefloor.addEventListener("click",function(){
 let red= Math.floor(Math.random()*255);
 let blue= Math.floor(Math.random()*255);
 let green= Math.floor(Math.random()*255);
+
 dancefloor.style.backgroundColor="RGB("+red+","+blue+","+green+")";
-console.log("You clicked the dance floor!");});
+console.log("You clicked the dance floor!");
+});
+
 emoji.addEventListener("click",function(event){
 event.stopPropagation();
-emoji.textContent="🙌🏻"
-console.log("You clicked the dancer")
+emoji.textContent="🙌🏻";
+console.log("You clicked the dancer");
 });
 window.addEventListener("keydown", function(event){
 if (event.key=== "ArrowUp"){
-emoji.textContent="🙌🏻"}
+emoji.textContent="🙌🏻";
+}
 if (event.key === "ArrowDown"){
-emoji.textContent="💁"
+emoji.textContent="💁";
 }
 if (event.key=== "ArrowLeft"){
-emoji.textContent="💃"
+emoji.textContent="💃";
 }
 if (event.key === "ArrowRight"){
-emoji.textContent="🕺🏻"
+emoji.textContent="🕺🏻";
 }
 if (event.key === "r"){
 dancefloor.style.backgroundColor= "";
 }
 });
+const button= document.getElementById("toggle-button")
+const Targetbox= document.getElementById("Target-box")
+button.addEventListener('click',function(){
+    Targetbox.classList.toggle("active");
+}
 
-
+)
 
 
