@@ -6,3 +6,9 @@ Without event.preventDefault(), the browser would try to submit the form using i
 phase 2:For this phase, I used an array called errors to collect any validation messages. I used if statements to check whether the name was blank, whether the rating was 5 stars, and whether the comments contained the word "wonderful."
 
 I chose to display all errors at once instead of showing them individually. I think this is easier for the user because they can see everything they need to correct without having to submit the form multiple times. One disadvantage is that several error messages could be overwhelming, but I think displaying them together is more helpful for this assignment.
+
+Phase 3:
+In this phase, I added a success message that appears when the user enters valid information. I also made the form disappear after a successful submission. I used localStorage.setItem() to save the reviewer's name and localStorage.getItem() to retrieve it when the page loads again.
+
+Local storage is simpler than cookies for this project because it allows JavaScript to save information directly in the browser without sending it to a server. Cookies are more useful when a website needs to send information to a server, such as certain login sessions. Since this project only needs to remember a name, local storage works well.
+
