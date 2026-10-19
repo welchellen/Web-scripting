@@ -12,3 +12,10 @@ In this phase, I added a success message that appears when the user enters valid
 
 Local storage is simpler than cookies for this project because it allows JavaScript to save information directly in the browser without sending it to a server. Cookies are more useful when a website needs to send information to a server, such as certain login sessions. Since this project only needs to remember a name, local storage works well.
 
+phase 4:
+For this phase, I tested the form using different types of information. I checked how the form responded to empty inputs, ratings below 5 stars, and comments that did not contain the word "wonderful." I also tested a valid submission and refreshed the page to check whether the saved name appeared.
+
+One edge case I considered was whether the form would accept the word "wonderful" with different capitalizations. Using .toLowerCase() allows the validation to recognize uppercase and lowercase versions of the word.
+
+I also used ChatGPT as an AI tutor to review the form's structure and validation logic. The AI suggested collecting errors in an array and using event.preventDefault() to control form submission. I used these suggestions because they helped organize the code and made the validation easier to understand.
+

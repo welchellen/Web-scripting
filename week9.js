@@ -28,3 +28,16 @@ form.addEventListener("submit", function(event) {
     let rating = Number(ratingInput.value);
     let comments = commentsInput.value;
 });
+{
+   errorBox.innerHTML = "";
+
+    successMessage.textContent =
+        "Thank you, " + name +
+        "! Your glowing review has been recorded.";
+
+    localStorage.setItem("reviewerName", name);
+
+    
+    form.style.display = "none";
+
+};
