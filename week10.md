@@ -8,7 +8,8 @@ What was the process of connecting your JavaScript class method to an HTML butto
 I used document.getelementbyId to connect my javascript class method to the HTML button. 
 
 Phase 3:
-
+How did your mental model change when moving from a single static pet to a dynamic list of pet objects? How does the Pet class make it easier to handle multiple pets compared to creating individual objects manually?
+The model changed when moving from a single static pet to a dynamic list of pet objects because you can now use the same class for different pets. The Pet class made it much easier to handle multiple pets because its like one class controls it all and there is no need for multiple objects. 
 
 
 
