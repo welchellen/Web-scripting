@@ -9,7 +9,7 @@ describe(){
 return "I am a" +this.type+ "named" +this.name + ".";}
 
 feed() {
-this.hunger=this.hunger-10; 
+this.hunger=Math.max(0,this.hunger-10);
 }
 }
 const petnameimput= document.getElementById("pet-name");
