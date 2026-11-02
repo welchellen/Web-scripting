@@ -1,6 +1,5 @@
 "use strict";
 
-// Phase 1 & 2: The Vault Foundation and Security Layer
 
 class InvalidKeyError extends Error {
 }
@@ -20,7 +19,6 @@ function accessVault(key) {
     return "Access Granted";
 }
 
-// Phase 3: The Safety Protocol
 
 function attemptEntry(key) {
     try {
@@ -38,13 +36,11 @@ function attemptEntry(key) {
     }
 }
 
-// Test vault access
 attemptEntry("SECRET_123");
 attemptEntry("wrong");
 attemptEntry(undefined);
 attemptEntry(NaN);
 
-// Phase 4: The Audit Suite
 
 function testCorrectKey() {
     return accessVault("SECRET_123") === "Access Granted";
@@ -85,7 +81,6 @@ function runTest(name, result) {
     }
 }
 
-// Run automated tests
 console.log("Automated Testing");
 
 runTest("Correct Key Test", testCorrectKey());
@@ -93,7 +88,6 @@ runTest("Undefined Key Test", testInvalidKey());
 runTest("NaN Key Test", testNaNKey());
 runTest("Wrong Key Test", testWrongKey());
 
-// Phase 5: Validation & Reflection
 
 console.log("Manual Testing");
 
