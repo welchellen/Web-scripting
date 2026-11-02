@@ -1,3 +1,4 @@
+"use strict";
 class pet{
 constructor(name,type){
 this.name=name
