@@ -8,6 +8,15 @@ function validateName(name) {
 const usernamePattern= /^\w{3,12}$/;
 return usernamePattern.test(username)
 }
+    function validatePhone(phone) {
+const phonePattern= /^\d{3}[-.]?\d{3}[-.]?\d{4}$/;
+return phonePattern.test(phone)
+}
+    function validatePromoCode(promoCode) {
+    const promoPattern=/^SUMMER$/i;
+    return promoPattern.test(promoCode)
+    }
+
 const sampleUsers = [
   {
     name: "Alex Johnson",
