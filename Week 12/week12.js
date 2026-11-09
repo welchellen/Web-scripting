@@ -16,6 +16,14 @@ return phonePattern.test(phone)
     const promoPattern=/^SUMMER$/i;
     return promoPattern.test(promoCode)
     }
+function formatPhoneNumber(phone) {
+  const phonePattern= /^(\d{3})[-.]?(\d{3})[-.]?(\d{4})?/;
+  if (typeof phone ==! "string" || !phonePattern.test(phone)){
+    return null;
+  }
+  return phone.replace(phonePattern, "($1, $2-$3)");
+  
+}
 
 const sampleUsers = [
   {
@@ -62,5 +70,5 @@ sampleUsers.forEach(function(user) {
     console.log("Username:", user.username);
     console.log("Valid Username:", validateUsername(user.username));
 
-    console.log("--------------------");
+    console.log(formatPhoneNumber(user.phone));
 });
