@@ -8,6 +8,8 @@ const commentsInput = document.getElementById("comments");
 const errorBox = document.getElementById("error-box");
 const successMessage = document.getElementById("success-message");
 const welcomeMessage = document.getElementById("welcome-message");
+const emailimput= document.getElementById("reviewer-email");
+
 
 let savedName = localStorage.getItem("reviewerName");
 
@@ -27,17 +29,25 @@ form.addEventListener("submit", function(event) {
     let name = nameInput.value.trim();
     let rating = Number(ratingInput.value);
     let comments = commentsInput.value;
+    let email= emailimput.value.trim();
 });
 {
    errorBox.innerHTML = "";
 
     successMessage.textContent =
-        "Thank you, " + name +
+        "Thank you, " + Name +
         "! Your glowing review has been recorded.";
 
-    localStorage.setItem("reviewerName", name);
+    localStorage.setItem("reviewerName", Name);
 
     
     form.style.display = "none";
+
+    if (Name === "" || ratingInput.value.trim() === "" ||
+    comments === ""|| email === "" ) {
+
+    errorBox.textContent = "Please fill out all fields.";
+    return;
+}
 
 };

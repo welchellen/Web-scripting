@@ -12,7 +12,11 @@ return "I am a" +this.type+ "named" +this.name + ".";}
 feed() {
 this.hunger=Math.max(0,this.hunger-10);
 }
+getfullness(){
+return 100- this.hunger;
 }
+}
+
 const petnameimput= document.getElementById("pet-name");
 const addpetbutton= document.getElementById("add-pet");
 const santuary = document.getElementById("Santuary");
@@ -46,9 +50,12 @@ addpetbutton.addEventListener("click",addpet);
 
 const pet1= new pet("Max","Dog");
 
+
 const pet2 = new pet ("Luna","Cat");
 
 
 
 console.log(pet1.describe());
 console.log(pet2.describe());
+
+
