@@ -12,3 +12,10 @@ Phase 3:
 What did you accomplish in this phase? What is the conceptual difference between testing a string with .test() and extracting/reformatting data using capturing groups and backreferences?
 
 In this phase, I created a function that formats valid phone numbers into a standard format using regular expressions, capturing groups, and the .replace() method. I also tested it with different phone numbers to make sure it worked correctly. The difference is that .test()only checks if a string matches a pattern and returns true or false, while capturing groups and backreferences allow you to take parts of a string and rearrange them into a new format.
+
+Phase 4:
+I designed my processRegistration() function by combining all the validation functions from the previous phases. I used an array to collect errors and return a failure message if any required information was invalid. If everything was valid, the function returned the formatted phone number and whether the discount was applied. Building and testing each regular expression separately made the final phase easier because I already knew the functions worked. It also made the code easier to organize and helped me avoid errors when putting everything together.
+
+
+Phase 5:
+

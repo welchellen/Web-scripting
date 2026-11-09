@@ -24,6 +24,40 @@ function formatPhoneNumber(phone) {
   return phone.replace(phonePattern, "($1, $2-$3)");
   
 }
+function processRegistration(user) {
+  const errors= [];
+  if (!validateName(user.name)) {
+    errors.push("Invalid name");
+}
+
+if (!validateUsername(user.username)) {
+    errors.push("Invalid username");
+}
+
+const formattedPhone = formatPhoneNumber(user.phone);
+
+if (formattedPhone === null) {
+    errors.push("Invalid phone");
+}
+if (errors.length > 0) {
+    return {
+        success: false,
+        errors: errors
+    };
+}
+return {
+    success: true,
+    data: {
+        name: user.name,
+        username: user.username,
+        phone: formattedPhone,
+        discountApplied: validatePromoCode(user.promoCode)
+    }
+};
+
+
+  
+}
 
 const sampleUsers = [
   {
