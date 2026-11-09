@@ -95,7 +95,42 @@ const sampleUsers = [
     username: "fiona_g",
     phone: "555-789-0123",
     promoCode: "" // No promo code provided
-  }
+
+
+
+
+  }]
+  const edgeCaseUsers = [
+    {
+        name: "John Smith",
+        username: "john@123",
+        phone: "555-123-4567",
+        promoCode: "SUMMER"
+    },
+    {
+        name: "Jane Doe",
+        username: "jane123",
+        phone: "555 123 4567",
+        promoCode: "summer"
+    },
+    {
+        name: "Amy Lee",
+        username: "abc",
+        phone: "5551234567",
+        promoCode: null
+    },
+    {
+        name: "Sam Wilson",
+        username: "abcdefghijkl",
+        phone: "555.123.4567",
+        promoCode: "SUMMER"
+    },
+    {
+        name: "Mary Jones",
+        username: "abcdefghijklm",
+        phone: "5551234567",
+        promoCode: ""
+    }
 ];
 sampleUsers.forEach(function(user) {
     console.log("Fiona Gallagher:", "fiona_g");
@@ -105,4 +140,24 @@ sampleUsers.forEach(function(user) {
     console.log("Valid Username:", validateUsername(user.username));
 
     console.log(formatPhoneNumber(user.phone));
+
+});
+
+
+const allUsers = sampleUsers.concat(edgeCaseUsers);
+
+allUsers.forEach(function(user) {
+    const result = processRegistration(user);
+
+    console.log("Testing:", user.name);
+
+    if (result.success) {
+        console.log("Registration Successful!");
+        console.log(result.data);
+    } else {
+        console.log("Registration Failed!");
+        console.log("Errors:", result.errors);
+    }
+
+    console.log("-----------------------");
 });

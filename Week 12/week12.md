@@ -18,4 +18,7 @@ I designed my processRegistration() function by combining all the validation fun
 
 
 Phase 5:
+What bugs or unexpected results did you identify while running the full test suite? If you consulted an AI tutor for review, what advice did it provide, and what did you learn about regular expressions from this exercise?
+
+In this phase, I tested my registration program using the sample dataset and added extra edge cases to check for invalid characters and incorrect lengths. I learned that usernames with special characters and phone numbers with spaces should fail validation. I also checked that usernames with 3 and 12 characters were accepted, while 13 characters were rejected. The AI review suggested improving the name validation to prevent names containing only spaces. This exercise helped me better understand how regular expressions work and why testing different inputs is important for catching errors.
 
